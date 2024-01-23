@@ -2,14 +2,16 @@ import React from "react";
 
 const Textbox = (props) => {
   return (
-    <div className="bg-slate-300 flex justify-center items-center m-2 p-2 relative">
+    <div className="bg-white flex justify-center items-center p-2 relative pl4">
       {props.icone4}
       <input
-        className="bg-slate-500 p-1 w-full rounded-lg pl-10 text-slate-300 font-semibold placeholder:text-white"
+        className="bg-white p-1 w-full rounded-lg pl-16 text-slate-700 font-semibold placeholder:text-Gray"
         type="text"
         placeholder={props.placeholder}
       />
+      {props.icone6}
       {props.icone5}
+     
     </div>
   );
 };

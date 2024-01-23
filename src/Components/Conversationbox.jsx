@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
 
 const Conversationbox = () => {
   return (
-    <div></div>
-  )
-}
-
-export default Conversationbox
+    <div
+      className="h-full bg-[url(./whatsaapbg.jpg)]"
+    ></div>
+  );
+};
+export default Conversationbox;

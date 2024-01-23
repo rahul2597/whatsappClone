@@ -1,20 +1,27 @@
-import React from 'react'
+import React from "react";
 import { AiTwotoneDelete } from "react-icons/ai";
 
-const Chatbox = () => {
+const Chatbox = ({ data }) => {
   return (
-    <div className='relative '>
-        <div className='flex items-center '>
-            <img className='h-12 w-12 rounded-full'src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/50dad8da-ce58-4540-a042-1313d34b7e56/dez932m-78ab3af2-fb7a-4c38-be04-82d99242cd29.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUwZGFkOGRhLWNlNTgtNDU0MC1hMDQyLTEzMTNkMzRiN2U1NlwvZGV6OTMybS03OGFiM2FmMi1mYjdhLTRjMzgtYmUwNC04MmQ5OTI0MmNkMjkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aUOhTs8UVLVRcdL4Bu_mACBQmlz0Q_J1JmG-vFm8_ng" alt="" />
-            <div className='block ml-5 text-zinc-200'>
-            <h4 className='text-2xl'>Naruto</h4>
-            <p>Hii itachi...how are you ? </p>
+    <div className="relative bg-white">
+      <div className="flex items-center ">
+        <div className="bg-black rounded-full">
+          {" "}
+          <img
+            className="h-12 w-12 rounded-full"
+            src={data.profile}
+            alt=""
+          />{" "}
         </div>
-        <AiTwotoneDelete className='absolute right-5 text-3xl font-extrabold' />
+        <div className="block ml-5 text-black">
+          <h4 className="text-2xl">{data.name}</h4>
+          <p>{data.content}</p>
         </div>
-        <hr  className=' border-t border-slate-700 absolute right-8 w-10/12'/>
+        <AiTwotoneDelete className="absolute right-5 text-3xl font-extrabold" />
+        <hr className=" border-t-2 border-slate-500 absolute bottom-0 right-8 w-10/12" />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Chatbox;
